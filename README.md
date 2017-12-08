@@ -8,6 +8,10 @@ what's the exercise? The exercise is up-to-you! There are several ideas below
 (in the also-cleverly named "Ideas" section), but feel free to come up with
 your own idea as well!
 
+### Uh, You Know Your "Game" Here _Really_ Sucks, Right?
+
+Oh, absolutely. It's ridiculous. 
+
 ### How Do I Know What You're Looking For?
 
 What we're looking for are two things: we want to interact with you on a PR
