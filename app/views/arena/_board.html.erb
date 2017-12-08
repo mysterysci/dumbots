@@ -1,0 +1,52 @@
+<table border="2" cellpadding="10">
+  <% (0..4).to_a.each do |row| %>
+      <tr>
+        <% (0..4).to_a.each do |col| %>
+            <% bots = @arena.bots_at(row, col)
+               bot_label = bots.map(&:emoji)
+            %>
+            <td style="width: 100px; text-align: center" data="<%= row %>,<%= col %>"><%= bot_label.present? ? bot_label.join : '&nbsp;'.html_safe %></td>
+        <% end %>
+      </tr>
+  <% end %>
+</table>
+
+<table cellpadding="10">
+  <tr>
+    <% @arena.bots.each do |bot| %>
+        <td>
+          <table border="1">
+            <tr>
+              <td>Player: <%= bot.class.name %></td>
+            </tr>
+            <tr>
+              <td>Energy: <%= bot.energy %></td>
+            </tr>
+            <tr>
+              <td>Health: <%= bot.health %></td>
+            </tr>
+          </table>
+        </td>
+    <% end %>
+  </tr>
+</table>
+
+<table cellpadding="10">
+  <% $action_log.each do |action| %>
+      <tr>
+        <td><%= action %></td>
+      </tr>
+  <% end %>
+</table>
+
+<% if @arena.game_over? %>
+    <% if @arena.winner %>
+        Winner Winner Robot Dinner: <%= @arena.winner.class %>
+    <% else %>
+        Everyone is all-the-way dead now. No one wins.
+    <% end %>
+    <br/><br/>
+    <%= form_tag '/new' do -%>
+        <div><%= submit_tag 'New Game' %></div>
+    <% end -%>
+<% end %>

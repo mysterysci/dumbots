@@ -1,0 +1,40 @@
+<script>
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
+    var setupCellClick = function () {
+        $("table").on("click", "td", function () {
+            $.ajax({
+                type: "POST",
+                url: '/arena/',
+                data: {
+                    player_action: $('input[name=action]:checked').val(),
+                    location: this.attributes.data.value
+                },
+                success: function (data) {
+                    $("#board").html(data);
+                    setupCellClick();
+                },
+                dataType: 'html'
+            });
+        });
+    };
+
+    $(document).ready(setupCellClick);
+</script>
+
+<div style="margin:0 auto; width: 600px">
+  <div style="margin: 0 auto; width: 400px">
+    <%= radio_button_tag(:action, 'move_to', 'checked') %>
+    <%= label_tag(:action_move, 'Move To') %>
+    <%= radio_button_tag(:action, 'fire_at') %>
+    <%= label_tag(:action_fire, 'Fire At') %>
+  </div>
+  <br/>
+  <div id="board">
+    <%= render 'board' %>
+  </div>
+</div>
