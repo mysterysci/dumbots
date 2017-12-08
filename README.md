@@ -3,6 +3,8 @@
 Welcome to Dumbots! It's a game. Not a great game, mind you, which is why it
 has this super-clever title. 
 
+[Go Play It Now!](https://dumbots.herokuapp.com/)
+
 But let's shoot straight, this is an interview code exercise thingamabob. So
 what's the exercise? The exercise is up-to-you! There are several ideas below
 (in the also-cleverly named "Ideas" section), but feel free to come up with
