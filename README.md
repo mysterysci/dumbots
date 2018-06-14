@@ -16,11 +16,9 @@ Oh, absolutely. It's ridiculous.
 
 ### How Do I Know What You're Looking For?
 
-What we're looking for are two things: we want to interact with you on a PR
-where you get to work at your own pace. Then if we progress to an in-person
-interview, we'll do some pairing with you to continue your work so we can get a
-sense of working with you in that way as well. The pairing should go smoother
-because all of us will be familiar with the same codebase.
+We're looking for broad things: what interests you, how you go about tackling
+a problem or an enhancement in an existing codebase, and how you interact with
+us on a Pull Request.
 
 What you choose to work on is up to you so you can highlight your strengths.
 How you work on it and interact with us is more important to us than what you
