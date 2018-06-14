@@ -31,7 +31,7 @@ work on.
 Please! That would be our preference so we can do some code-review with you
 along the way.
 
-### Is This Game Representative of the Work Your Hiring For?
+### Is This Game Representative of the Work You're Hiring For?
 
 On the face of it, not at all. But it has enough Rails in it you can work on
 some Rails things if you want. It has enough UI stuff in it you can work on
